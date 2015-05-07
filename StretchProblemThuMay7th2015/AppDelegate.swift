@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         println("Minutes: \(minutes); Seconds: \(seconds)")
         
         seconds--
-        if (seconds < 0) {
+        if (seconds < 0 || minutes < 0) {
             seconds = 59
             minutes--
             if (minutes < 0) {
@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        minutes = 0
+        minutes = 1
         seconds = 10
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("decreaseSecond"), userInfo: nil, repeats: true)
 
