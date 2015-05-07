@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var minutes: Int = 0
-    var seconds: Int = 0
+    var minutes: NSInteger = 0
+    var seconds: NSInteger = 0
     var timer: NSTimer?
 
     func decreaseSecond() {
